@@ -1,0 +1,10 @@
+<label>Please Enter Your Name Below</label>
+<input type="text" 
+       class="form-control" 
+       [(ngModel)]="username"
+       (input)="inputCheck($event)">
+<p>Your Username is: {{ username }}</p>
+<button class="btn btn-info" 
+        (click)="onResetClick()" 
+        [disabled]="!allowReset"
+        >Reset</button>
